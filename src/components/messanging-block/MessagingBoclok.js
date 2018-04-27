@@ -7,8 +7,9 @@ export class MessagingBlock extends Component {
   constructor() {
     super();
 
+    const commentList = JSON.parse(localStorage.getItem("commentList"));
     this.state = {
-      commentList: [],
+      commentList: commentList || [],
       isMessangerHidden: true,
       isMiniatureHidden: false,
       inputText: ""
@@ -24,7 +25,12 @@ export class MessagingBlock extends Component {
   handleClick() {
     const array = JSON.parse(JSON.stringify(this.state.commentList));
     array.push({ text: this.state.inputText });
-    this.setState({ commentList: [].concat(array) });
+    this.setState({ commentList: [].concat(array) }, () => {
+      localStorage.setItem(
+        "commentList",
+        JSON.stringify(this.state.commentList)
+      );
+    });
   }
 
   handleChange(event) {
