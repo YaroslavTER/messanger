@@ -1,13 +1,17 @@
 .comments {
   box-shadow: 2px 2px 6px grey;
-  width: 410px;
+  width: 350px;
   height: 545px;
   margin: 0 auto;
   margin-left: 1em;
 }
 
 .modal-content {
-  width: 405px;
+  width: 330px;
+}
+
+.header {
+  overflow: auto;
 }
 
 .comments,
@@ -22,7 +26,7 @@
 .header-name {
   font-family: sans-serif;
   font-size: 35px;
-  width: 300px;
+  width: 240px;
   color: gray;
 }
 
@@ -40,8 +44,8 @@ div.inline {
 }
 
 .comments-area {
-  height: 415px;
-  width: 400px;
+  height: 425px;
+  width: 325px;
   display: table-cell;
   vertical-align: bottom;
 }
@@ -110,7 +114,8 @@ div.inline {
   margin-top: 1em;
   font-size: 12px;
   margin-right: 10px;
-  width: 290px;
+  width: 230px;
+  height: 45px;
   color: #888888;
 }
 
