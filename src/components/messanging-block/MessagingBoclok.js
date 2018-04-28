@@ -7,7 +7,7 @@ export class MessagingBlock extends Component {
   constructor() {
     super();
 
-    const commentList = null; //JSON.parse(localStorage.getItem("commentList"));
+    const commentList = JSON.parse(localStorage.getItem("commentList"));
     this.state = {
       commentList: commentList || [],
       isMessangerHidden: true,
